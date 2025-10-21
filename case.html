@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS:GO Case Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 CS:GO Case Clicker</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">💰 Tiền:</span>
+                    <span id="money" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">📦 Cases mở:</span>
+                    <span id="casesOpened" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">💎 Tổng giá trị:</span>
+                    <span id="totalValue" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="clicker-section">
+                <button id="clickBtn" class="click-btn">
+                    <span class="click-text">CLICK ĐỂ KIẾM TIỀN</span>
+                    <span class="click-amount">+<span id="clickValue">1</span>$</span>
+                </button>
+            </section>
+
+            <section class="cases-section">
+                <h2>📦 Cases Có Sẵn</h2>
+                <div class="cases-grid" id="casesGrid">
+                    <!-- Cases sẽ được tạo bằng JS -->
+                </div>
+            </section>
+
+            <section class="opening-section" id="openingSection" style="display: none;">
+                <div class="opening-animation">
+                    <h3>🎰 Đang mở case...</h3>
+                    <div class="reel-container">
+                        <div class="reel" id="reel"></div>
+                        <div class="selector"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inventory-section">
+                <h2>🎒 Kho đồ của bạn</h2>
+                <div class="inventory-controls">
+                    <button id="sellAllBtn" class="sell-all-btn">Bán tất cả</button>
+                    <span class="inventory-count">Số lượng: <span id="inventoryCount">0</span></span>
+                </div>
+                <div class="inventory-grid" id="inventoryGrid">
+                    <p class="empty-inventory">Chưa có item nào. Hãy mở case!</p>
+                </div>
+            </section>
+
+            <section class="upgrades-section">
+                <h2>⚡ Nâng cấp</h2>
+                <div class="upgrades-grid" id="upgradesGrid">
+                    <!-- Upgrades sẽ được tạo bằng JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
